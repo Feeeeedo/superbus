@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": "vue",
+  "no-duplicate-case":2,
+  "no-empty": 2,
+  "no-func-assign":2,
+  "no-mixed-spaces-and-tabs": 2,  
+}
