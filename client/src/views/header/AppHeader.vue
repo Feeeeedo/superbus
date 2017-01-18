@@ -9,7 +9,34 @@
 
 		</div>
 		<div class="func-nav">
-			<div class="func-item">
+			<div class="func-item avatar-item">
+				<div class="avatar">
+					<img src="../../assets/img/avatar.png"/>
+				</div>
+				<div class="login-box">
+					<div class="setting-info">
+						<span class="info">用户信息</span>
+						<span class="setting">设置</span>
+					</div>
+					<div class="logout-box">
+						<span class="logout">注销</span>
+					</div>
+				</div>
+			</div>
+			<div class="func-item ad-item">
+				<div class="ad">
+					<strong>Feeeeedo</strong>
+				</div>
+			</div>
+			<el-popover
+			  ref="popover1"
+			  placement="top-start"
+			  title="标题"
+			  width="200"
+			  trigger="hover"
+			  content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
+			</el-popover>
+<!-- 			<div class="func-item">
 				<i class="func-icon func-close"></i>
 			</div>
 			<div class="func-item">
@@ -17,16 +44,16 @@
 			</div>
 			<div class="func-item">
 				<i class="func-icon func-min"></i>
-			</div>
-			<div class="func-item">
+			</div> -->
+<!-- 			<div class="func-item">
 				<i class="func-icon func-setting"></i>
-			</div>
-			<div class="func-item">
+			</div> -->
+<!-- 			<div class="func-item">
 				<i class="func-icon func-skin"></i>
 			</div>
 			<div class="func-item">
 				<i class="func-icon func-user"></i>
-			</div>
+			</div> -->
 			<div class="search-box">
 				<input type="text" placeholder="搜索应用或者接口" />
 				<i class="search-icon"></i>
@@ -84,7 +111,7 @@ export default {
 					text-align: right;
 					font-size: 21px;
 					font-weight: 600;
-					color: #fff;
+					color: #a8a9ad;
 				}
 			}
 			.title {
@@ -93,7 +120,7 @@ export default {
 					height: 100%;
 					line-height: 45px;
 					text-align: center;
-					color: #fff;
+					color: #a8a9ad;
 					font-size: 12px;
 				}
 			}
@@ -116,6 +143,7 @@ export default {
 					padding: 0 5px;
 					color: #545252;
 					width: 100%;
+					border: 1px solid #c0c2c7;
 				}
 				.search-icon {
 					position: absolute;
@@ -171,9 +199,6 @@ export default {
 			}
 			.func-item {
 				float: right;
-				width: 30px;
-				height: 50px;
-				cursor: pointer;
 				.func-icon {
 					width: 100%;
 					height: 100%;
@@ -202,6 +227,77 @@ export default {
 				}
 				.func-skin {
 					background-image: url('../..//assets/iconfonts/skin.svg');
+				}
+			}
+			.avatar-item {
+				width: 50px;
+				height: 50px;
+				margin-right: 10px;
+				position: relative;
+				.avatar {
+					width: 100%;
+					height: 100%;
+					padding: 7px;
+					img {
+						border-radius: 4px;
+						width: 100%;
+						height: 100%;
+						cursor: pointer;
+						box-shadow: 0px 0px 1px 1px #ccc6c6;
+					}				
+				}
+				.login-box {
+					position: absolute;
+					top: 50px;
+					right: -10px;
+					width: 140px;
+					box-shadow: 0 0 1px 1px #ccc6c6;
+					.setting-info {
+						height: 30px;
+						display: flex;
+						border-bottom: 1px solid #ccc6c6;
+						>span {
+							display: inline-block;
+							background-color: #fff;
+							cursor: pointer;
+							text-align: center;
+							line-height: 30px;
+							font-size: 13px;
+						}
+						.setting {
+							flex: 1;
+						}
+						.info {
+							flex: 1;
+							border-right: 1px solid #ccc6c6;
+						}
+					}
+					.logout-box {
+						height: 30px;
+						span {
+							font-size: 13px;
+							text-align: center;
+							line-height: 30px;
+							display: inline-block;
+							width: 100%;
+							cursor: pointer;
+							height: 30px;
+							background-color: #fff;
+						}
+					}
+				}
+				.login-box span:hover{
+					background-color: #a9a6a6;
+					color: #fff;
+				}
+			}
+			.ad-item {
+				margin-right: 10px;
+				.ad {
+					strong {
+						line-height: 50px;
+    				color: #a8a9ad;
+					}
 				}
 			}
 			.func-item:hover .func-icon{

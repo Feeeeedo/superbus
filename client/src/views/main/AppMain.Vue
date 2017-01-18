@@ -24,6 +24,7 @@ export default {
 
 <style lang="scss">
 .app-main {
+	background-color: #fff;
 	display: flex;
 	.main-nav {
 		height: 100%;

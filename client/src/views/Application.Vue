@@ -1,8 +1,8 @@
 <template>
 	<div class="application">
-		<app-header></app-header>
-		<app-main></app-main>
-		<app-footer></app-footer>
+		<div class="header"><app-header></app-header></div>
+		<div class="main"><app-main></app-main></div>
+		<div class="footer"><app-footer></app-footer></div>
 	</div>
 </template>
 
@@ -29,19 +29,16 @@ export default {
 
 @import '../css/constants.scss';
 .application {
-	width: 1100px;
-	height: 650px;
-	margin: 0 auto;
-	box-shadow: 0px 0px 1px 1px #ccc;
 	position: relative;
-	.app-header {
+	.header {
 		height: 50px;
-		background-color: $themeColor;
+		border-bottom: 1px solid #d9dadc;
 	}
-	.app-main {
-		height: 550px;
+	.main {
+		padding: 36px 0 88px;
+		background-color: #e7e8eb;
 	}
-	.app-footer {
+	.footer {
 		height: 50px;
 		position: absolute;
 		bottom: 0px;

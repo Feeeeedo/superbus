@@ -21,7 +21,6 @@ export default {
   #app {
     width: 100%;
     height: 100%;
-    margin-top: 30px;
     position: relative;
   }
 </style>
