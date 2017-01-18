@@ -24,8 +24,11 @@ export default {
 
 <style lang="scss">
 .app-main {
+	overflow-y: scroll;
 	background-color: #fff;
 	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
 	.main-nav {
 		height: 100%;
 		flex: 1;

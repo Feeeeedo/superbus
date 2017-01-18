@@ -95,8 +95,13 @@ export default {
 					color: #222;
 				}
 			}
-			.selected a{
+			.menu-item:hover {
+				background-color: #dde0ec;
+			}
+			.menu-item.selected{
 				background-color: $themeColor;
+			}
+			.menu-item.selected a {
 				color: #fff;
 			}
 		}
