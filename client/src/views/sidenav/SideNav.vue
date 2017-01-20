@@ -1,44 +1,45 @@
 <template>
 	<div class="side-nav">
 		<div class="menu-box">
-			<dl class="menu no-extra">
-				<dt class="menu-title"><i class="icon-menu list"></i>API自助平台</dt>
-				<dl class="menu-item selected"><a href="">平台信息</a></dl>
-				<dl class="menu-item"><a href="">API协议</a></dl>
-				<dl class="menu-item"><a href="">API协议</a></dl>
-			</dl>
-			<dl class="menu no-extra">
-				<dt class="menu-title"><i class="icon-menu list"></i>应用和接口</dt>
-				<dl class="menu-item"><a href="">已上架应用</a></dl>
-				<dl class="menu-item"><a href="">已上架应用</a></dl>
-				<dl class="menu-item"><a href="">已上架接口</a></dl>
-			</dl>
-			<dl class="menu no-extra">
-				<dt class="menu-title"><i class="icon-menu list"></i>管理</dt>
-				<dl class="menu-item"><a href="">应用管理</a></dl>
-				<dl class="menu-item"><a href="">接口管理</a></dl>
-				<dl class="menu-item"><a href="">已上架应用</a></dl>
-				<dl class="menu-item"><a href="">已上架接口</a></dl>
-			</dl>
-			<dl class="menu no-extra">
-				<dt class="menu-title"><i class="icon-menu list"></i>统计</dt>
-				<dl class="menu-item"><a href="">系統公告</a></dl>
-				<dl class="menu-item"><a href="">系統公告</a></dl>
-				<dl class="menu-item"><a href="">已上架应用</a></dl>
-				<dl class="menu-item"><a href="">已上架应用</a></dl>
-				<dl class="menu-item"><a href="">已上架接口</a></dl>
+			<dl v-for="(item, index) in SideNavArr" :class="{menu: true, 'no-extra': index === 0}">
+				<dt class="menu-title">
+					<i class="icon-menu list"></i>{{item.title}}
+				</dt>
+				<dd v-for="(itemIn, indexIn) in item.child" 
+						:class="{'menu-item': true, selected: selectedName === itemIn.en}"><a href="">{{itemIn.ch}}</a></dd>
 			</dl>
 		</div>
 	</div>
 </template>
 <script>
+import { SideNavArr } from '../../constants/sidenav'
+// import _ from 'lodash'
+/* eslint-disable */
 export default {
   name: 'side-nav',
   components: {},
   data () {
     return {
-      aa: ['xxx', 'bbbb', 'cccc']
+      SideNavArr: SideNavArr,
+      selectedName: 'abstract'
     }
+  },
+  watch: {
+    '$route': function (newVal) {
+      console.log(newVal)
+    }
+  },
+  create () {
+    console.log(this.$route)
+  },
+  mounted () {
+  	this.SideNavArr.map((dl) => {
+  		dl.child.map((dd) => {
+  			if (this.$route.fullPath.indexOf(dd.path) >= 0) {
+  				this.selectedName = dd.en
+  			}
+  		})
+  	})
   }
 }
 </script>
@@ -48,13 +49,10 @@ export default {
 .side-nav {
 	border-right: 1px solid #e7e7eb;
 	.menu-box {
-		.no-extra {
-			border-top-width: 0;
-			margin-top: 13px;
-		}
 		.menu {
 			padding-bottom: 6px;
 			margin-to: 6px;
+			border-top: 1px solid #e7e7eb;
 			.menu-title {
 				position: relative;
 				padding: 0 30px 0;
@@ -96,7 +94,7 @@ export default {
 				}
 			}
 			.menu-item:hover {
-				background-color: #dde0ec;
+				background-color: #e7e8eb;
 			}
 			.menu-item.selected{
 				background-color: $themeColor;
@@ -104,6 +102,10 @@ export default {
 			.menu-item.selected a {
 				color: #fff;
 			}
+		}
+		.no-extra {
+			border-top-width: 0;
+			margin-top: 13px;
 		}
 	}
 }

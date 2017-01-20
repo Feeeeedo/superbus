@@ -1,11 +1,11 @@
 <template>
-	<div class="main-nav">
-		<router-view class="view"></router-view>
+	<div class="application">
+		application
 	</div>
 </template>
 <script>
 export default {
-  name: 'main-nav',
+  name: 'application',
   components: {},
   data () {
     return {

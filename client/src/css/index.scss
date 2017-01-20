@@ -38,6 +38,11 @@ body{font-family: "微软雅黑"; overflow: hidden;}
 body {
   overflow: scroll;
 }
+#app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 a {
   text-decoration: none;
 }

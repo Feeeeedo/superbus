@@ -1,11 +1,11 @@
 <template>
-	<div class="main-nav">
-		<router-view class="view"></router-view>
+	<div class="raq-guid">
+		raq-guid
 	</div>
 </template>
 <script>
 export default {
-  name: 'main-nav',
+  name: 'raq-guid',
   components: {},
   data () {
     return {
