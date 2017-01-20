@@ -1,16 +1,12 @@
 <template>
   <div id="app">
-    <application></application>
+    <router-view class="view"></router-view>
   </div>
 </template>
-
 <script>
-import Application from './views/Application'
 export default {
   name: 'app',
-  components: {
-    Application
-  },
+  components: {},
   data () {
     return {}
   }
