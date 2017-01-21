@@ -6,7 +6,10 @@
 					<i class="icon-menu list"></i>{{item.title}}
 				</dt>
 				<dd v-for="(itemIn, indexIn) in item.child" 
-						:class="{'menu-item': true, selected: selectedName === itemIn.en}"><a href="">{{itemIn.ch}}</a></dd>
+						:class="{'menu-item': true, selected: selectedName === itemIn.en}"
+						@click="navigateTo(itemIn)">
+					<a href="javascript:void(0);">{{itemIn.ch}}</a>
+				</dd>
 			</dl>
 		</div>
 	</div>
@@ -25,8 +28,14 @@ export default {
     }
   },
   watch: {
-    '$route': function (newVal) {
-      console.log(newVal)
+    '$route.fullPath': function (newVal) {
+      this.SideNavArr.map((dl) => {
+      	dl.child.map((dd) => {
+      		if (this.$route.fullPath.indexOf(dd.path) >= 0) {
+      			this.selectedName = dd.en
+      		}
+      	})
+      })
     }
   },
   create () {
@@ -40,6 +49,11 @@ export default {
   			}
   		})
   	})
+  },
+  methods: {
+  	navigateTo (item) {
+  		this.$router.push(item.path)
+  	}
   }
 }
 </script>

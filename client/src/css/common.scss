@@ -1,0 +1,16 @@
+/*title tab container*/
+.title-tab-container {
+	width: 100%;
+	.title-tab {
+		display: inline-block;
+		line-height: 30px;
+		font-size: 19px;
+		color: #222;
+		border-bottom: 3px solid #44b549;
+		padding: 0 5px;
+		margin-top: 10px;
+	}
+	.bottom-line {
+	  border-bottom: 1px solid #e7e7eb;
+	}
+}

@@ -16,5 +16,6 @@ export default {
 </script>
 
 <style lang="scss">
-
+.main-content {
+}
 </style>

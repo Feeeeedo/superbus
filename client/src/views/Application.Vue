@@ -1,5 +1,5 @@
 <template>
-	<div class="application">
+	<div class="app">
 		<div class="header"><app-header></app-header></div>
 		<div class="main"><app-main></app-main></div>
 		<div class="footer"><app-footer></app-footer></div>
@@ -28,8 +28,9 @@ export default {
 <style lang="scss">
 
 @import '../css/constants.scss';
-.application {
+.app {
 	position: relative;
+	min-width: 1000px;
 	.header {
 		height: 50px;
 		border-bottom: 1px solid #d9dadc;

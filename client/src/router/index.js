@@ -29,7 +29,7 @@ const routerArr = [
 				path: 'raqapiagree',
 				component: RaqAPIAgree
 			}, {
-				path: 'raqapiaguid',
+				path: 'raqapiguid',
 				component: RaqAPIGuid
 			}, {
 				path: 'application',

@@ -5,6 +5,7 @@ import Vuex from 'vuex'
 import ElementUI from 'element-ui'
 import VueRouter from 'vue-router'
 import 'element-ui/lib/theme-default/index.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import './filters'
 // import App from './App'

@@ -24,7 +24,6 @@ export default {
 
 <style lang="scss">
 .app-main {
-	overflow-y: scroll;
 	background-color: #fff;
 	display: flex;
 	max-width: 1200px;

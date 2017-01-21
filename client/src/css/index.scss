@@ -14,26 +14,7 @@ body{font-family: "微软雅黑"; overflow: hidden;}
 
 
 //公共滚动条样式部分
-::-webkit-scrollbar{
-  width: 8px;
-  height:9px;
-}
-::-webkit-scrollbar-track{
-  background-color: #ffffff;
-}
-::-webkit-scrollbar-thumb{ /* 1 */
-  background-color: #C1C1C1;
-  margin-right:3px;
-}
-:hover::-webkit-scrollbar-thumb { /* 2 */
-  background-color: #C1C1C1;
-}
-::-webkit-scrollbar-thumb:hover { /* 3 */
-  background-color: #C1C1C1;
-}
-::-webkit-scrollbar-thumb:active { /* 4 */
-  background-color: #C1C1C1;
-}
+
 
 body {
   overflow: scroll;
@@ -46,4 +27,8 @@ body {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+} 
 @import './constants';
+@import './common';
