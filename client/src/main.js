@@ -12,6 +12,7 @@ import './filters'
 // import Router from './router'
 import RouterArr from './router'
 import './css/index.scss'
+import './assets/test/iconfont'
 Vue.use(VueRouter)
 Vue.use(Vuex)
 Vue.use(ElementUI)

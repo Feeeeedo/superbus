@@ -115,6 +115,7 @@ export default {
 			}
 			.menu-item.selected a {
 				color: #fff;
+				text-decoration: none;
 			}
 		}
 		.no-extra {

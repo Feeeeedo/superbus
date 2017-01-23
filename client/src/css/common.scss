@@ -14,3 +14,20 @@
 	  border-bottom: 1px solid #e7e7eb;
 	}
 }
+
+
+/*no padding*/
+.no-padding {
+	padding: 0px;
+}
+.no-margin {
+	margin: 0px !important;
+}
+.iconfont {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	width: 32px;
+	height: 32px;
+}
