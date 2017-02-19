@@ -1,20 +1,18 @@
 <template>
 	<div class="app">
 		<div class="header"><app-header></app-header></div>
-		<div class="main"><app-main></app-main></div>
+		<router-view class="router-document-manage"></router-view>
 		<div class="footer"><app-footer></app-footer></div>
 	</div>
 </template>
 
 <script>
 import AppHeader from './header/AppHeader'
-import AppMain from './main/AppMain'
 import AppFooter from './footer/AppFooter'
 export default {
   name: 'application',
   components: {
 		AppHeader,
-		AppMain,
 		AppFooter
   },
   data () {
@@ -34,10 +32,6 @@ export default {
 	.header {
 		height: 50px;
 		border-bottom: 1px solid #d9dadc;
-	}
-	.main {
-		padding: 36px 0 88px;
-		background-color: #e7e8eb;
 	}
 	.footer {
 		height: 50px;

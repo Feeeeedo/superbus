@@ -163,7 +163,7 @@ export default {
           height: 34px;
           vertical-align: middle;
           display: inline-block;
-          background: url('../../assets/iconfonts/application.svg') 0 0 no-repeat;
+          background: url('../../../assets/iconfonts/application.svg') 0 0 no-repeat;
           margin-top: 3px;
         }
         .number {

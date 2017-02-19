@@ -1,3 +1,4 @@
+@import './constants.scss';
 /*title tab container*/
 .title-tab-container {
 	width: 100%;
@@ -30,4 +31,26 @@
 	background-size: 100% 100%;
 	width: 32px;
 	height: 32px;
+}
+
+/*iconfont样式*/
+i.icon-fonts {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+}
+/*tag 样式*/
+span.custom-tag {
+	display: inline-block;
+	padding: 2px 4px;
+	color: #fff;
+	line-height: 16px;
+	border-radius: 2px;
+}
+span.custom-tag.primary {
+	background-color: #5baee8;
+}
+/* no-padding */
+.no-padding {
+	padding: 0px;
 }

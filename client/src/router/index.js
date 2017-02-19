@@ -1,12 +1,16 @@
 import Home from '../views/Application'
 import Login from '../views/login/Login'
-import Abstract from '../views/abstract/Abstract'
-import RaqAPIGuid from '../views/raqAPIGuid/RaqAPIGuid'
-import RaqAPIAgree from '../views/raqAPIAgree/RaqAPIAgree'
-import Interface from '../views/interface/Interface'
-import Application from '../views/application/Application'
-import ManageApp from '../views/manageapp/ManageApp'
-import ManageInter from '../views/manageinter/ManageInter'
+import Abstract from '../views/manage/abstract/Abstract'
+import RaqAPIGuid from '../views/manage/raqAPIGuid/RaqAPIGuid'
+import RaqAPIAgree from '../views/manage/raqAPIAgree/RaqAPIAgree'
+import Interface from '../views/manage/interface/Interface'
+import Application from '../views/manage/application/Application'
+import ManageApp from '../views/manage/manageapp/ManageApp'
+import ManageInter from '../views/manage/manageinter/ManageInter'
+import Document from '../views/document/Document'
+import Manage from '../views/manage/Manage'
+import AppList from '../views/document/applist/AppList'
+import InterfaceList from '../views/document/interfacelist/InterfaceList'
 
 const routerArr = [
 	{
@@ -21,28 +25,70 @@ const routerArr = [
 		children: [
 			{
 				path: '',
-				component: Abstract
-			}, {
-				path: 'abstract',
-				component: Abstract
-			}, {
-				path: 'raqapiagree',
-				component: RaqAPIAgree
-			}, {
-				path: 'raqapiguid',
-				component: RaqAPIGuid
-			}, {
-				path: 'application',
-				component: Application
-			}, {
-				path: 'interface',
-				component: Interface
-			}, {
-				path: 'manageapp',
-				component: ManageApp
-			}, {
-				path: 'manageinter',
-				component: ManageInter
+				component: Document,
+				children: [
+					{
+						path: '',
+						component: AppList
+					},
+					{
+						path: 'app',
+						component: AppList
+					},
+					{
+						path: 'interface',
+						component: InterfaceList
+					}
+				]
+			},
+			{
+				path: 'document',
+				component: Document,
+				children: [
+					{
+						path: '',
+						component: AppList
+					},
+					{
+						path: 'app',
+						component: AppList
+					},
+					{
+						path: 'interface',
+						component: InterfaceList
+					}
+				]
+			},
+			{
+				path: 'manage',
+				component: Manage,
+				children: [
+					{
+						path: '',
+						component: Abstract
+					}, {
+						path: 'abstract',
+						component: Abstract
+					}, {
+						path: 'raqapiagree',
+						component: RaqAPIAgree
+					}, {
+						path: 'raqapiguid',
+						component: RaqAPIGuid
+					}, {
+						path: 'application',
+						component: Application
+					}, {
+						path: 'interface',
+						component: Interface
+					}, {
+						path: 'manageapp',
+						component: ManageApp
+					}, {
+						path: 'manageinter',
+						component: ManageInter
+					}
+				]
 			}
 		]
 	}

@@ -15,7 +15,7 @@
 	</div>
 </template>
 <script>
-import { SideNavArr } from '../../constants/sidenav'
+import { SideNavArr } from '../../../constants/sidenav'
 // import _ from 'lodash'
 /* eslint-disable */
 export default {
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../css/constants.scss';
+@import '../../../css/constants.scss';
 .side-nav {
 	border-right: 1px solid #e7e7eb;
 	.menu-box {
@@ -87,7 +87,7 @@ export default {
 					margin-top: -0.2em;
 				}
 				.icon-menu.list {
-					background-image: url('../../assets/iconfonts/sidenav/list.svg');
+					background-image: url('../../../assets/iconfonts/sidenav/list.svg');
 					background-size: 95% 95%;
 					background-repeat: no-repeat;
 					background-position: center;

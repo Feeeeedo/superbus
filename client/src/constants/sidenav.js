@@ -4,15 +4,15 @@ const sideNavArr = [
 		icon: 'list',
 		child: [
 			{
-				path: '/home/abstract',
+				path: '/home/manage/abstract',
 				ch: '平台信息',
 				en: 'abstract'
 			}, {
-				path: '/home/raqapiagree',
+				path: '/home/manage/raqapiagree',
 				ch: 'API协议',
 				en: 'raqapiagree'
 			}, {
-				path: '/home/raqapiguid',
+				path: '/home/manage/raqapiguid',
 				ch: 'API说明',
 				en: 'raqapiguid'
 			}
@@ -22,11 +22,11 @@ const sideNavArr = [
 		icon: 'list',
 		child: [
 			{
-				path: '/home/application',
+				path: '/home/manage/application',
 				ch: '已上架应用',
 				en: 'application'
 			}, {
-				path: '/home/interface',
+				path: '/home/manage/interface',
 				ch: '已上架接口',
 				en: 'interface'
 			}
@@ -36,11 +36,11 @@ const sideNavArr = [
 		icon: 'list',
 		child: [
 			{
-				path: '/home/manageapp',
+				path: '/home/manage/manageapp',
 				ch: '应用管理',
 				en: 'manageapp'
 			}, {
-				path: '/home/manageinter',
+				path: '/home/manage/manageinter',
 				ch: '接口管理',
 				en: 'manageinter'
 			}
